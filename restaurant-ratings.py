@@ -26,7 +26,10 @@ else:
         restaurant = raw_input("Restaurant Name: ")
         rating = raw_input("Rating: ")
 
-        r_scores[restaurant] = rating
+        if not rating.isdigit():
+            print "Rating must be an integer."
+        else:
+            r_scores[restaurant] = int(rating)
 
 
     # create sorted list from dictionary
